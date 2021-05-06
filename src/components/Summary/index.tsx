@@ -1,21 +1,35 @@
 //images
-import outcomeImage from '../../assets/outcome.svg';
-import incomeImage from '../../assets/income.svg';
+import outcomeImg from '../../assets/outcome.svg';
+import incomeImg from '../../assets/income.svg';
+import totalImg from '../../assets/total.svg';
 
 //styles
-import { Amount, Container, Item } from "./styles";
+import { Container } from "./styles";
 
 export function Summary() {
   return (
     <Container>
-      <Item>
-        <div>
+      <div>
+        <header>
           <p>Entradas</p>
-          <img src={incomeImage} alt="Entrada"/>
-        </div>
-
-        <Amount>R$ 17.400,00</Amount>
-      </Item>
+          <img src={incomeImg} alt="Entradas" />
+        </header>
+        <strong>R$ 1000,00</strong>
+      </div>
+      <div>
+        <header>
+          <p>Saídas</p>
+          <img src={outcomeImg} alt="Saídas" />
+        </header>
+        <strong>R$ 500,00</strong>
+      </div>
+      <div>
+        <header>
+          <p>Total</p>
+          <img src={totalImg} alt="Total" />
+        </header>
+        <strong>R$ 500,00</strong>
+      </div>
     </Container>
   );
 }
